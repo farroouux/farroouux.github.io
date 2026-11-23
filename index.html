@@ -50,6 +50,19 @@
         .card h2 { color: var(--accent-secondary); font-size: 2rem; margin-bottom: 15px; }
         .card p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px; }
         
+        .reward-box {
+            background: rgba(249, 115, 22, 0.1);
+            border: 1px solid var(--accent-primary);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        .reward-box h3 { color: var(--accent-secondary); margin-bottom: 15px; font-size: 1.3rem; }
+        .reward-box ul { color: var(--text-main); font-size: 1.05rem; line-height: 1.8; margin-left: 20px; margin-bottom: 15px; }
+        .reward-box li { margin-bottom: 8px; }
+        .reward-note { color: var(--text-muted); font-size: 0.95rem; font-style: italic; margin-top: 10px; }
+        
         .btn {
             display: inline-block;
             background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
@@ -85,14 +98,14 @@
         .form-input:focus { border-color: var(--accent-secondary); background: rgba(255, 255, 255, 0.15); }
         
         .warning-text {
-            font-size: 0.9rem;
-            color: var(--accent-secondary);
-            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #ef4444; /* Red for critical warning */
+            margin-top: 20px;
             font-weight: 700;
             line-height: 1.4;
         }
         .sub-text {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: var(--text-muted);
             margin-top: 8px;
         }
@@ -105,6 +118,7 @@
         @media (max-width: 600px) {
             h1 { font-size: 2.5rem; }
             .container { padding: 40px 15px; }
+            .reward-box { padding: 20px; }
         }
     </style>
 </head>
@@ -116,15 +130,28 @@
         <div class="card">
             <h2>🍬 Sweet Blast Deluxe</h2>
             <p>Dive into a vibrant Match-3 puzzle adventure featuring over 2,000 levels, live tournaments, and epic friend challenges. Built for speed, fun, and fair rewards.</p>
-            <p><strong>Currently in Closed Beta Testing!</strong></p>
             
-            <form action="https://formsubmit.co/endroid44@gmail.com" method="POST" style="margin-top: 20px;">
+            <div class="reward-box">
+                <h3>🎁 Closed Beta Tester Rewards:</h3>
+                <ul>
+                    <li>✅ Early access to the full game before public release.</li>
+                    <li>✅ <strong>0.00005000 Welcome Coins</strong> automatically on first launch.</li>
+                    <li>✅ An <strong>Exclusive Tester Bonus of 0.00050000 coins</strong> sent directly to your in-game account after 14 days!</li>
+                </ul>
+                <p class="reward-note">Note: You don't have to play every day. Just keep the game installed for 14 continuous days so we can unlock the public release!</p>
+            </div>
+
+            <p style="color: var(--text-main); font-weight: 700; font-size: 1.1rem; margin-bottom: 15px;">Ready to join? Enter your details below:</p>
+            
+            <form action="https://formsubmit.co/endroid44@gmail.com" method="POST">
                 <!-- Anti-spam honeypot (hidden) -->
                 <input type="text" name="_honey" style="display:none">
                 <!-- Disable captcha for smoother experience -->
                 <input type="hidden" name="_captcha" value="false">
                 <!-- Redirect back to your website after they submit -->
                 <input type="hidden" name="_next" value="https://farroouux.github.io">
+                <!-- Email subject line -->
+                <input type="hidden" name="_subject" value="New Beta Tester for Sweet Blast Deluxe!">
                 
                 <input type="email" name="email" class="form-input" placeholder="Enter the Gmail linked to your Google Play..." required>
                 
@@ -134,7 +161,7 @@
             </form>
             
             <p class="warning-text">
-                ⚠️ IMPORTANT: You MUST use the exact Gmail address you use for Google Play, or the test link will not work!
+                ⚠️ CRITICAL: You MUST use the exact Gmail address you use for Google Play. If you use a different email, the test link will NOT work!
             </p>
             <p class="sub-text">
                 We will email the private Google Play testing link to this address within 24 hours.
