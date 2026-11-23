@@ -6,8 +6,6 @@
     <title>FarroouuX Studios | Sweet Blast Deluxe</title>
     <meta name="description" content="Official website of FarroouuX Studios, creators of Sweet Blast Deluxe, a vibrant Match-3 puzzle adventure.">
     
-    <!-- GOOGLE VERIFICATION CODE WILL GO RIGHT HERE LATER -->
-
     <style>
         :root {
             --bg-dark: #0f172a;
@@ -63,8 +61,41 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 350px;
         }
         .btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(249, 115, 22, 0.6); }
+        
+        .form-input {
+            width: 100%;
+            max-width: 350px;
+            padding: 14px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-align: center;
+            outline: none;
+        }
+        .form-input::placeholder { color: rgba(255, 255, 255, 0.6); }
+        .form-input:focus { border-color: var(--accent-secondary); background: rgba(255, 255, 255, 0.15); }
+        
+        .warning-text {
+            font-size: 0.9rem;
+            color: var(--accent-secondary);
+            margin-top: 15px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+        .sub-text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
         
         footer { margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
         footer p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px; }
@@ -86,7 +117,8 @@
             <h2>🍬 Sweet Blast Deluxe</h2>
             <p>Dive into a vibrant Match-3 puzzle adventure featuring over 2,000 levels, live tournaments, and epic friend challenges. Built for speed, fun, and fair rewards.</p>
             <p><strong>Currently in Closed Beta Testing!</strong></p>
-                        <form action="https://formsubmit.co/endroid44@gmail.com" method="POST" style="margin-top: 20px;">
+            
+            <form action="https://formsubmit.co/endroid44@gmail.com" method="POST" style="margin-top: 20px;">
                 <!-- Anti-spam honeypot (hidden) -->
                 <input type="text" name="_honey" style="display:none">
                 <!-- Disable captcha for smoother experience -->
@@ -94,15 +126,18 @@
                 <!-- Redirect back to your website after they submit -->
                 <input type="hidden" name="_next" value="https://farroouux.github.io">
                 
-                <input type="email" name="email" placeholder="Enter your Gmail address..." required 
-                    style="width: 100%; max-width: 300px; padding: 12px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1rem; margin-bottom: 15px; text-align: center;">
+                <input type="email" name="email" class="form-input" placeholder="Enter the Gmail linked to your Google Play..." required>
                 
-                <button type="submit" class="btn" style="border: none; cursor: pointer; width: 100%; max-width: 300px;">
+                <button type="submit" class="btn">
                     Join the Beta Test
                 </button>
             </form>
-            <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 15px;">
-                We will email you the private Google Play testing link within 24 hours!
+            
+            <p class="warning-text">
+                ⚠️ IMPORTANT: You MUST use the exact Gmail address you use for Google Play, or the test link will not work!
+            </p>
+            <p class="sub-text">
+                We will email the private Google Play testing link to this address within 24 hours.
             </p>
         </div>
 
